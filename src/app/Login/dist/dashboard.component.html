@@ -1,0 +1,12 @@
+<table mat-table [dataSource]="flights" class="mat-elevation-z8">
+    <!-- Define columns -->
+    <ng-container matColumnDef="icao24">
+        <th mat-header-cell *matHeaderCellDef>ICAO24</th>
+        <td mat-cell *matCellDef="let flight">{{ flight[0] }}</td>
+    </ng-container>
+
+    <!-- ... other columns ... -->
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
